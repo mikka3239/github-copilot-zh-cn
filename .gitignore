@@ -1,0 +1,12 @@
+# 运行产物
+app/reports/
+tools/reports/
+*.log
+
+# 截图与本地调试产物
+*.png
+!docs/*.png
+
+# 系统
+Thumbs.db
+.DS_Store
