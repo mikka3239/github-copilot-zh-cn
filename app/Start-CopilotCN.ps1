@@ -42,8 +42,14 @@ if (-not $exe) {
                 Where-Object { $_.DisplayName -like '*GitHub Copilot*' -and $_.InstallLocation } |
                 Select-Object -First 1
         if ($item) {
-            $cand = Join-Path $item.InstallLocation 'github.exe'
-            if (Test-Path $cand) { $exe = $cand; break }
+            # 注册表里的 InstallLocation 有时带引号，先洗掉
+            $loc = ([string]$item.InstallLocation).Trim().Trim('"').Trim()
+            if ($loc) {
+                try {
+                    $cand = Join-Path $loc 'github.exe'
+                    if (Test-Path $cand) { $exe = $cand; break }
+                } catch { }
+            }
         }
     }
 }

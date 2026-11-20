@@ -71,6 +71,7 @@
     [/^(.+), Run on$/, '$1，运行于'],
     [/^(.+), model and reasoning(, .+)?$/, '$1，模型与推理$2'],
     [/^Mode: (.+)$/, '模式：$1'],
+    [/^Error checking for updates: (.+)$/, '检查更新失败：$1'],
     [/^(.+) announcements$/, '$1播报'],
     [/^Not installed · (.+)$/, '未安装 · $1'],
     [/^Preview: (.+)$/, '预览：$1'],
