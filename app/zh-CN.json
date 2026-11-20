@@ -475,7 +475,7 @@
   "sets a session-specific override. Managed settings can restrict modes or set a different starting mode without changing this saved preference.": "可设该会话的单独覆盖项。托管设置可以限制模式，或在不变更此已保存偏好的前提下设定不同的初始启动模式。",
   "Sets Copilot to Interactive, Plan, or Autopilot. Requires Use keyboard shortcuts enabled.": "在交互式、规划、自动驾驶之间切换。需先启用键盘快捷键。",
   "Settings": "设置",
-  "Settings, Ctrl + Comma": "设置（Ctrl + ,）",
+  "Settings, Ctrl + Comma": "设置，Ctrl + 逗号",
   "Share feedback": "分享反馈",
   "Share feedback, Control + Enter": "分享反馈（Ctrl + Enter）",
   "Shared": "共享",
@@ -594,5 +594,7 @@
   "You can start from scratch or turn an existing agent skill into an automation.": "可以从零开始，也可以把已有的智能体技能转成自动化。",
   "Your automation draft will be lost.": "你的自动化草稿将会丢失。",
   "Zoom": "缩放",
-  "Failed to contact GitHub for app updates: error decoding response body": "无法连接 GitHub 检查更新：响应解析失败。"
+  "Failed to contact GitHub for app updates: error decoding response body": "无法连接 GitHub 检查更新：响应解析失败。",
+  "Error checking for updates: Failed to contact GitHub for app updates: error decoding response body": "检查更新失败：无法连接 GitHub 获取应用更新（响应解析失败）。",
+  "Retry": "重试"
 }
