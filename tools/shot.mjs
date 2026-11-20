@@ -36,7 +36,7 @@ if (CLICK) {
     const dialogOf = () => [...document.querySelectorAll('[role="dialog"]')].find(d => /设置|Settings/.test(d.getAttribute('aria-label') || ''));
     let dlg = dialogOf();
     if (!dlg) {
-      const btn = [...document.querySelectorAll('button,[role="button"]')].find(n => norm(n.getAttribute('aria-label')).startsWith('设置'));
+      const btn = [...document.querySelectorAll('button,[role="button"]')].find(n => /^(设置|Settings)/.test(norm(n.getAttribute('aria-label'))));
       if (btn) { fire(btn); await new Promise(r => setTimeout(r, 1500)); }
       dlg = dialogOf();
     }
@@ -48,7 +48,7 @@ if (CLICK) {
     fire(el);
     await new Promise(r => setTimeout(r, 800));
     if (!dialogOf()) {                       // 面板被关掉了，重开一次再点
-      const btn = [...document.querySelectorAll('button,[role="button"]')].find(n => norm(n.getAttribute('aria-label')).startsWith('设置'));
+      const btn = [...document.querySelectorAll('button,[role="button"]')].find(n => /^(设置|Settings)/.test(norm(n.getAttribute('aria-label'))));
       if (btn) { fire(btn); await new Promise(r => setTimeout(r, 1500)); }
       const again = dialogOf();
       if (!again) return 'closed';
